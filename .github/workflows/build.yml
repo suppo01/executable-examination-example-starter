@@ -15,6 +15,7 @@ env:
 # Focuses on the main branch only
 on: [push, pull_request]
 
+
 # Create one single job
 # This job performs all necessary checks
 jobs:
