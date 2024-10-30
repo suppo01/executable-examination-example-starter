@@ -13,11 +13,7 @@ env:
 # Controls when the action will run
 # Workflow begins with push or PR events
 # Focuses on the main branch only
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]
 
 # Create one single job
 # This job performs all necessary checks
@@ -68,7 +64,7 @@ jobs:
         # Run GatorGrader: use the gatorgrade.yml in repository's root
         - name: Run GatorGrader with GatorGrade
           run:  |
-           pipx install gatorgrade
+           pipx install git+https://github.com/rebekahrudd/gatorgrade
            pipx list
            cd exam
            gatorgrade --report env md GITHUB_STEP_SUMMARY
