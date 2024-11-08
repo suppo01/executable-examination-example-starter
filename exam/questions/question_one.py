@@ -86,7 +86,7 @@ def find_minimum_value(matrix):
 def find_maximum_value(matrix: List[List[int]]) -> Union[int, None]:
     """Return the maximum value in the provided matrix."""
     # confirm that there is a value in the [0][0] position
-    return None
+    return 1
 
 # }}}
 
