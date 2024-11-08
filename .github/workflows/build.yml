@@ -63,7 +63,8 @@ jobs:
             poetry run execexam . tests/ --verbose
         # Run GatorGrader: use the gatorgrade.yml in repository's root
         - name: Run GatorGrader with GatorGrade
-          run:  |
+          if: always()
+          run: |
            pipx install git+https://github.com/rebekahrudd/gatorgrade
            pipx list
            cd exam
